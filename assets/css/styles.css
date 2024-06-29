@@ -1,5 +1,73 @@
+:root {
+    --text-color: #5f5b53;
+    --primary-color: #171100;
+}
+
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+}
+
+/* CSS Common */
+a {
+    text-decoration: none;
+}
+
+.content {
+    width: 1140px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===== Header ===== */
+.header .body {
+    display: flex;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav a {
+    padding: 12px 21px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.nav a:hover,
+.nav li.active a {
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--text-color);
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav li.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 21px;
+    display: block;
+    width: 12px;
+    height: 2px;
+    background: var(--primary-color);
 }
