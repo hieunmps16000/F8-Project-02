@@ -24,6 +24,7 @@ a {
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     min-width: 114px;
     line-height: 50px;
@@ -33,6 +34,11 @@ a {
     text-align: center;
     color: #fff;
     font-size: 1.6rem;
+    overflow: hidden;
+}
+
+.btn:hover {
+    opacity: 0.9;
 }
 
 .main-content {
@@ -91,7 +97,7 @@ a {
     border-radius: 1px;
 }
 
-.action {
+.header .action {
     margin-left: 49px;
 }
 
