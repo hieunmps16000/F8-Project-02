@@ -559,4 +559,5 @@ a {
 .feature__img:last-child {
     margin-top: 0;
     height: 440px;
+    border-radius: 20px;
 }
