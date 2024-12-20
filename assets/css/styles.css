@@ -497,10 +497,11 @@ a {
     border-radius: 50%;
     background: #634700;
     transition: 0.25s;
+    cursor: pointer;
 }
 
-.dot:hover {
-    cursor: pointer;
+.dot:hover,
+.dot--active {
     background: #ffb900;
 }
 
@@ -560,4 +561,117 @@ a {
     margin-top: 0;
     height: 440px;
     border-radius: 20px;
+}
+
+/* Blog */
+.blog {
+    padding: 96px 0;
+    background: #fffcf4;
+}
+
+.blog-top {
+    text-align: center;
+}
+
+.blog__desc {
+    width: 448px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blog__list {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+}
+
+.blog-item {
+    border-radius: 16px;
+    background: #fff;
+    transition: box-shadow 0.25s;
+}
+
+.blog-item:hover {
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.blog-item__image {
+    display: block;
+    height: 250px;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+}
+
+.blog-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.25s;
+}
+
+.blog-item__img:hover {
+    transform: scale(1.1);
+}
+
+.blog-item__content {
+    padding: 20px 20px 28px 20px;
+}
+
+.blog-item__date {
+    position: relative;
+    display: inline-flex;
+    column-gap: 4px;
+    align-items: center;
+    padding-bottom: 12px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.85;
+}
+
+.blog-item__date::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffb900;
+}
+
+.blog-item__date::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #e2dfda;
+    border-radius: 0.5px;
+}
+
+.blog-item__title {
+    display: block;
+    margin-top: 12px;
+    color: #171100;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.blog-item__read-more {
+    margin-top: 12px;
+    width: 118px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.blog-item__read-more:hover {
+    background: #ffb900;
+}
+
+.blog__dots {
+    margin-top: 38px;
+    justify-content: center;
 }
