@@ -13,19 +13,30 @@
         />
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
-        <!-- header -->
+        <!-- PC header -->
         <header class="header fixed">
             <div class="main-content">
                 <div class="body">
+                    <!-- Menu mobile -->
+                    <label for="menu-checkbox" class="toggle-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                fill="currentColor"
+                                d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"
+                            />
+                        </svg>
+                    </label>
+
                     <!-- Logo -->
-                    <a href="#!">
-                        <img src="./assets/img/logo.svg" alt="Lesson." class="logo" />
+                    <a href="#!" class="logo">
+                        <img src="./assets/img/logo.svg" alt="Lesson." />
                     </a>
 
                     <!-- Nav -->
-                    <nav class="nav">
+                    <nav id="nav-pc" class="nav">
                         <ul>
                             <li class="active">
                                 <a href="#!">Home</a>
@@ -39,6 +50,9 @@
                             <li>
                                 <a href="#!">Reviews</a>
                             </li>
+                            <li class="show-on-mobile separate">
+                                <a href="#!">Sign up</a>
+                            </li>
                         </ul>
                     </nav>
 
@@ -47,6 +61,31 @@
                         <a href="#!" class="btn sign-up-btn">Sign up</a>
                     </div>
                 </div>
+            </div>
+        </header>
+
+        <!-- Tablet/mobile header -->
+        <header class="mobile-header">
+            <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden />
+            <!-- Overlay -->
+            <label class="menu-overlay" for="menu-checkbox"></label>
+
+            <!-- Menu content -->
+            <div class="menu-drawer">
+                <!-- Logo -->
+                <a href="#!" class="logo">
+                    <img src="./assets/img/logo.svg" alt="Lesson." />
+                </a>
+
+                <!-- Nav -->
+                <nav id="nav-mobile" class="nav-mobile"></nav>
+
+                <!-- Script -->
+                <script>
+                    const navPc = document.querySelector("#nav-pc");
+                    const navMobile = document.querySelector("#nav-mobile");
+                    navMobile.innerHTML = navPc.innerHTML;
+                </script>
             </div>
         </header>
 

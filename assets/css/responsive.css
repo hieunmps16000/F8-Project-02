@@ -1,0 +1,246 @@
+/* PC */
+@media screen and (min-width: 992px) {
+    .show-on-mobile {
+        display: none;
+    }
+
+    .mobile-header {
+        display: none;
+    }
+}
+
+/* Table */
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .show-on-mobile {
+        display: none;
+    }
+}
+
+/* Tablet and Mobile */
+@media screen and (max-width: 991.98px) {
+    .header.fixed {
+        top: 0;
+    }
+
+    .header .body {
+        padding: 20px 0;
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .header .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header .nav {
+        display: none;
+    }
+
+    .toggle-menu svg {
+        width: 24px;
+        color: #666;
+    }
+
+    .header .action {
+        margin-left: 0;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.25s;
+    }
+
+    .menu-checkbox:checked + .menu-overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-drawer {
+        position: fixed;
+        inset: 0 40% 0 0;
+        z-index: 3;
+        padding: 60px;
+        background: #fff;
+        transform: translateX(-100%);
+        transition: transform 0.5s;
+    }
+
+    .menu-checkbox:checked ~ .menu-drawer {
+        transform: translateX(0);
+    }
+
+    .nav-mobile {
+        margin-top: 48px;
+    }
+
+    .nav-mobile a {
+        display: block;
+        padding: 12px 0;
+        color: #333;
+    }
+
+    .hero .body {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .hero .media-block {
+        width: 100%;
+    }
+
+    .media-block .img {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .hero-summary {
+        right: 48px;
+    }
+
+    .course__list,
+    .blog__list {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .feedback-item {
+        flex-direction: column;
+    }
+
+    .feedback-item__info {
+        text-align: center;
+    }
+
+    .dots {
+        justify-content: center;
+    }
+
+    .feedback-item__content {
+        width: 100%;
+        padding: 0 24px;
+    }
+
+    .feature__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+
+    .feature__column {
+        width: 100%;
+    }
+
+    .feature__column:nth-child(3) {
+        order: 4;
+    }
+
+    .feature__column:nth-child(4) {
+        order: 3;
+    }
+
+    .footer__row {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 48px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 767.98px) {
+    .main-content {
+        max-width: calc(100% - 24px);
+    }
+
+    .header .action {
+        display: none;
+    }
+
+    .header .logo {
+        position: initial;
+        transform: none;
+    }
+
+    .menu-drawer {
+        padding: 40px;
+        inset: 0 25% 0 0;
+    }
+
+    .nav-mobile .separate {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .hero-summary {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .heading {
+        font-size: 3.3rem;
+    }
+
+    .hero {
+        padding: 32px 0 64px 0;
+    }
+
+    .hero .desc {
+        font-size: 1.6rem;
+    }
+
+    .hero-cta {
+        min-width: 156px;
+        height: 48px;
+        font-size: 1.6rem;
+    }
+
+    .hero .watch-video span {
+        font-size: 1.6rem;
+    }
+
+    .hero__parameter strong {
+        font-size: 3.4rem;
+    }
+
+    .course,
+    .feature {
+        padding: 64px 0;
+    }
+
+    .course__top {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+
+    .course__list,
+    .blog__list,
+    .feature__img-wrap,
+    .footer__row {
+        grid-template-columns: 1fr;
+    }
+
+    .feedback-text__desc {
+        font-size: 1.6rem;
+        line-height: 1.8;
+    }
+
+    .feature__img-wrap {
+        row-gap: 24px;
+    }
+
+    .section-heading {
+        font-size: 2.8rem;
+    }
+
+    .course__desc,
+    .blog__desc {
+        width: 100%;
+    }
+}
