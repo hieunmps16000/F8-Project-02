@@ -38,6 +38,7 @@ a {
     color: #fff;
     font-size: 1.6rem;
     overflow: hidden;
+    transition: 0.25s;
 }
 
 .btn:hover {
