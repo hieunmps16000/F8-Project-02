@@ -37,6 +37,7 @@ a {
     text-align: center;
     color: #fff;
     font-size: 1.6rem;
+    font-weight: 600;
     overflow: hidden;
     transition: 0.25s;
 }
@@ -253,7 +254,7 @@ a {
 }
 
 .hero .watch-video {
-    background: #fff;
+    background: transparent;
     border: none;
     display: flex;
     align-items: center;
@@ -665,7 +666,7 @@ a {
     margin-top: 12px;
     width: 118px;
     font-size: 1.4rem;
-    font-weight: 600;
+    font-weight: 400;
     transition: 0.25s;
 }
 
@@ -737,10 +738,6 @@ a {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.85;
-}
-
-.footer__link:hover {
-    text-decoration: underline;
 }
 
 .footer__content {
